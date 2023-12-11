@@ -1,0 +1,48 @@
+### METODOS GET 
+### GET ALL pokemons ✅
+GET http://localhost:4000/mypokeapi/
+
+### Get pokemon by ID - 🚫Error string
+GET http://localhost:4000/mypokeapi/string
+
+### Get pokemon by ID - 🚫ERROR negative number
+GET http://localhost:4000/mypokeapi/-1
+
+### Get pokemon by ID - 🚫ERROR not found
+GET http://localhost:4000/mypokeapi/152
+
+### Get pokemon by ID - ✅ EXITO 
+GET http://localhost:4000/mypokeapi/25
+
+
+
+
+### CREATE POKEMON ✅
+POST http://localhost:4000/mypokeapi/new
+content-type: application/json
+
+{
+    "id":" 152   ",
+    "name":" TerreNEITOR     ",
+    "weight":20,
+    "types":[" STEel", "grass"]
+      
+}
+
+
+
+### UPDATE POKEMON BY ID 
+PATCH  http://localhost:4000/mypokeapi/update/152
+content-type: application/json
+
+{
+    "sql":"SELECT * FROM USERS",
+    "id":"4001",
+    "name":"terreneitor    ",
+    "weight":1200,
+    "types":["psychic","shadow"]
+}
+
+
+### DELETE POKEMON
+DELETE http://localhost:4000/mypokeapi/delete/152

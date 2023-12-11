@@ -1,0 +1,13 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+    ports:
+      - '4000:4000'
+    environment:
+      - NODE_ENV=production
+      - SERVER_PORT=4000
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - postgres
